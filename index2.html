@@ -1,0 +1,46 @@
+#include "iostream"
+#include "string"
+#include "stdlib.h"
+ using namespace std;
+ 
+ struct Student
+ {
+     string name;
+     int sex;
+     string otchestvo;
+     string familya;
+     int age;
+ };
+ 
+ int main()
+ {
+     const int kolichestvo_student=10;
+     Student Info[kolichestvo_student]={};
+ 
+     for(int i=0;i<kolichestvo_student;i++)
+     {
+        cout<<"Vvedite sex 1=male,2=female:";
+        cin>>Info[i].sex;
+        cout<<"Vvedite imya:";
+        cin>>Info[i].name;
+        cout<<"Vvedite familyu:";
+        cin>>Info[i].familya;
+        cout<<"Vvedite Otschestvo:";
+        cin>>Info[i].otchestvo;
+        cout<<"Vvedite Vozrast:";
+        cin>>Info[i].age;
+     }
+ 
+     for (int i = 0; i < kolichestvo_student; i++)
+     {
+         if(Info[i].age>18&&Info[i].sex=1)
+         {
+             cout<<"Imya:"<<Info[i].name<<endl;
+             cout<<"Familya:"<<Info[i].familya<<endl;
+             cout<<"Otschestvo:"<<Info[i].otchestvo<<endl;
+             cout<<"Vozrast:"<<Info[i].age;
+         }
+     }
+     
+    system("Pause");
+    return 0;
